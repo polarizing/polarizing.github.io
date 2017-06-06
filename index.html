@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kevin Li - Portfolio</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">    
+	<!-- Kube CSS -->
+
+    <link rel="stylesheet" href="css/kube.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+      <link href="http://vjs.zencdn.net/5.19.2/video-js.css" rel="stylesheet">
+
+  <!-- If you'd like to support IE8 -->
+  <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/p5.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.dom.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.sound.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+</head>
+<body>
+	<!-- <audio src="assets/audio/bg.mp3" id="bgAudio" autoplay loop></audio> -->
+	
+	<div id="sketch-holder">
+      <!-- Our sketch will go here! -->
+    </div>
+	<div id="main">
+	 
+
+	    <!-- <h1>Hello, world!</h1> -->
+	    	<div class="row gutters">
+	    		<!-- <section id="left"> -->
+			    	<div class="col col-3">
+			    		<div class="row" id="logo-heading">
+				    		<div class="col" id="logo-heading-text">kevin.z.li</div>
+				    	</div>
+				    	<div class="row auto" id="logo-subheading">
+				    		<div class="col">developer | creative technologist</div>
+				    	</div>
+
+				    	<div class="row">
+				    		
+				    		<!-- I love to script in Python. -->
+				    	</div>
+				  <!--   	 <div class="row auto nav-link"><a href="portfolio.html">Portfolio</a></div>
+				         <div class="row auto nav-link"><a href="portfolio.html">About</a></div>
+				    	 <div class="row auto nav-link"><a href="portfolio.html">Resume</a></div>
+				    	 <div class="row auto nav-link"><a href="portfolio.html">Blog</a></div>
+	 -->
+			    	</div>
+			   	<!-- </section> -->
+			   	 <!-- <section id="right"> -->
+
+			   	 	<div class="col col-9">
+
+			   	 		<div class="row work-section-label">
+			   	 			Selected Creative Works
+			   	 		</div>
+
+			   	 		<div class="strip">
+
+			   	 			<div class="row gutters auto project-row">
+					    		<div class="col col-3 project" data-drawer="1" data-id="1" data-project-title="metempsychosis">
+					    			<div class="row project-image">
+					    				<img src="assets/images/test.jpg">
+					    			</div>
+					    			<div class="row project-info-container">
+					    				<div class="row project-info-title">
+					    				Metempsychosis (2017)
+						    			</div>
+						    			<div class="row project-info-desc">
+						    				webgl, three.js, gpgpu, audio-reactive
+						    			</div>
+					    			</div>
+					    			
+					    		</div>
+					    		<div class="col col-3 project" data-drawer="1" data-id="2" data-project-title="memory">
+					    			<div class="row project-image">
+					    				<img src="assets/images/chair.png">
+					    			</div>
+					    			<div class="row project-info-container">
+					    				<div class="row project-info-title">
+					    				Ex-Memory (2017)
+						    			</div>
+						    			<div class="row project-info-desc">
+						    				projection mapping, interactive video
+						    			</div>
+					    			</div>
+					    		</div>
+					    		<div class="col col-3 project" data-drawer="1" data-id="3" data-project-title="tree">
+					    			<div class="row project-image">
+					    				<img src="assets/images/tree/thumb.png">
+					    			</div>
+					    			<div class="row project-info-container">
+					    				<div class="row project-info-title">
+					    				Particle Tree (2017)
+						    			</div>
+						    			<div class="row project-info-desc">
+						    				three.js, computational geometry
+						    			</div>
+					    			</div>
+					    		</div>
+					    	</div>
+
+					    	<div class="row drawer" data-id = "1">
+					    		<div class="project-detail" data-id="1">
+					    			<div class="project-synopsis-container">
+					    				<div class="row project-synopsis-label">Project Synopsis</div>
+					    				<div class="row project-synopsis">
+					    					An experimental simulation of the afterlife coded in WebGL using the GPGPU and FBO to render 262k particles in real-time. It uses curl noise, simulated gravitational attraction, and time to define and distort parametric surfaces and 3D models.
+					    				</div>
+					    			</div>
+					    			<div class="project-video-container">
+					    				<div class="row project-video-label">Video</div>
+					    				<div class="row project-video">
+					    				 <video id="my-video" class="video-js" controls preload="auto" width="100%" height="100%"
+										  poster="assets/videos/metempsychosis/poster.png" data-setup="{}">
+										    <source src="assets/videos/metempsychosis/reel.mp4" type='video/mp4'>
+										    <!-- <source src="MY_VIDEO.webm" type='video/webm'> -->
+										    <p class="vjs-no-js">
+										      To view this video please enable JavaScript, and consider upgrading to a web browser that
+										      <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+										    </p>
+										  </video>
+					    					<!-- <iframe src="https://player.vimeo.com/video/218256671" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
+					    				</div>
+
+					    			</div>
+					    			<div class="project-link-container">
+						    			<div class="project-link">
+						    				View Project
+						    			</div>
+					    			</div>
+
+					    		</div>
+					    		<div class="project-detail" data-id="2">
+					    			<div class="project-synopsis-container">
+					    				<div class="row project-synopsis-label">Project Synopsis</div>
+					    				<div class="row project-synopsis">
+					    					An interactive film set in the future. Year 3001. Artificial intelligence has taken over the world. A world in which memories are very sought after. You are a memory extraction operator. Your sole task is to monitor, observe and extract his memories from behind the machine.
+					    				</div>
+					    			</div>
+					    			<div class="project-video-container">
+					    				<div class="row project-video-label">Video</div>
+					    				<div class="row project-video">
+					    				 <video id="my-video" class="video-js" controls preload="auto" width="100%" height="100%"
+										  poster="assets/videos/metempsychosis/poster.png" data-setup="{}">
+										    <source src="assets/videos/metempsychosis/reel.mp4" type='video/mp4'>
+										    <!-- <source src="MY_VIDEO.webm" type='video/webm'> -->
+										    <p class="vjs-no-js">
+										      To view this video please enable JavaScript, and consider upgrading to a web browser that
+										      <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+										    </p>
+										  </video>
+					    					<!-- <iframe src="https://player.vimeo.com/video/218256671" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
+					    				</div>
+
+					    			</div>
+					    			<div class="project-link-container">
+						    			<div class="project-link">
+						    				View Project Documentation
+						    			</div>
+					    			</div>
+
+					    		</div>
+					    		<div class="project-detail" data-id="3">
+					    			<div class="project-synopsis-container">
+					    				<div class="row project-synopsis-label">Project Synopsis</div>
+					    				<div class="row project-synopsis">
+					    					A 3D tree mesh is analyzed using octree spatial partitioning to find the tips of branches (leaves) grouped by vertices. Colored dancing particles attract and repulse from the leaves in cheerful music. Coded in Three.JS.
+					    				</div>
+					    			</div>
+					    			<div class="project-video-container">
+					    				<div class="row project-video-label">Video</div>
+					    				<div class="row project-video">
+					    				 <video id="my-video" class="video-js" controls preload="auto" width="100%" height="100%"
+										  poster="assets/videos/metempsychosis/poster.png" data-setup="{}">
+										    <source src="assets/videos/metempsychosis/reel.mp4" type='video/mp4'>
+										    <!-- <source src="MY_VIDEO.webm" type='video/webm'> -->
+										    <p class="vjs-no-js">
+										      To view this video please enable JavaScript, and consider upgrading to a web browser that
+										      <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+										    </p>
+										  </video>
+					    					<!-- <iframe src="https://player.vimeo.com/video/218256671" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
+					    				</div>
+
+					    			</div>
+					    			<div class="project-link-container">
+						    			<div class="project-link">
+						    				View Project
+						    			</div>
+					    			</div>
+
+					    		</div>
+					    	</div>
+
+			   	 		</div>
+				    	
+				    	<div class="strip">
+				    		
+					    	<div class="row gutters auto project-row">
+					    		
+					    		<div class="col col-3 project" data-drawer="2" data-project-title="coffee">
+					    			<div class="row project-image">
+					    				<img src="assets/images/coffee/thumb.png">
+					    			</div>
+					    			<div class="row project-info-container">
+					    				<div class="row project-info-title">
+					    				Coffee Ethan (2017)
+						    			</div>
+						    			<div class="row project-info-desc">
+						    				audio, animation
+						    			</div>
+					    			</div>
+					    		</div>
+					    		<div class="col col-3 project" data-drawer="2" data-project-title="crane">
+					    			<div class="row project-image">
+					    				<img src="assets/images/crane/thumb.png">
+					    			</div>
+					    			<div class="row project-info-container">
+					    				<div class="row project-info-title">
+					    					Paper Crane Cards <span class="chinese">亲情鹤卡</span> (2017)
+						    			</div>
+						    			<div class="row project-info-desc">
+						    				design, UI/UX, sketch
+						    			</div>
+					    			</div>
+					    			
+					    		</div>
+					    		<div class="col col-3 project" data-drawer="2" data-project-title="glockenspiel">
+					    			<div class="row project-image">
+					    				<img src="assets/images/glockenspiel/square.jpg">
+					    			</div>
+					    			<div class="row project-info-container">
+					    				<div class="row project-info-title">
+					    				Interactive Glockenspiel (2016)
+						    			</div>
+						    			<div class="row project-info-desc">
+						    				node.js, arduino, websockets
+						    			</div>
+					    			</div>
+					    		</div>
+					    		
+					    	</div>
+
+					    	<div class="row drawer" data-id = "2">
+					    		This is a drawer to explain the projects.
+					    	</div>
+
+					    </div>
+
+				    	<div class="row work-section-label">
+				    		Other Creative Works				    		
+				    	</div>
+
+				    	<div class="strip">
+					    		
+					    	<div class="row gutters auto project-row">
+					    		<div class="col col-3 project">
+					    			<div class="row project-image">
+					    				<img src="assets/images/paint/thumb.jpg">
+					    			</div>
+					    			<div class="row project-info-container">
+					    				<div class="row project-info-title">
+					    				Drip Drip (2017) [WIP]
+						    			</div>
+						    			<div class="row project-info-desc">
+						    				html5, canvas
+						    			</div>
+					    			</div>
+					    			
+					    		</div>
+					    		<div class="col col-3 project">
+					    			<div class="row project-image">
+					    				<img src="assets/images/ipod/square.png">
+					    			</div>
+					    			<div class="row project-info-container">
+					    				<div class="row project-info-title">
+					    				The iPod Classic (2017)
+						    			</div>
+						    			<div class="row project-info-desc">
+						    				css3, design, ui/ux
+						    			</div>
+					    			</div>
+					    		</div>
+					    		<div class="col col-3 project">
+					    			<div class="row project-image">
+					    				<img src="assets/images/town/the-little-town.png">
+					    			</div>
+					    			<div class="row project-info-container">
+					    				<div class="row project-info-title">
+					    				The Little Town (2017)
+						    			</div>
+						    			<div class="row project-info-desc">
+						    				isometric projection, animation
+						    			</div>
+					    			</div>
+					    		</div>
+					    	</div>
+					    </div>
+
+					    <div class="strip">
+					    	
+					    	<div class="row gutters auto project-row">
+					    		<div class="col col-3 project">
+					    			<div class="row project-image">
+					    				<img src="assets/images/jam4/thumb.png">
+					    			</div>
+					    			<div class="row project-info-container">
+					    				<div class="row project-info-title">
+					    				Jam4 (Odyssey 2.0) (2016)
+						    			</div>
+						    			<div class="row project-info-desc">
+						    				audio, websockets, multiplayer
+						    			</div>
+					    			</div>
+					    			
+					    		</div>
+					    		<div class="col col-3 project">
+					    			<div class="row project-image">
+					    				<img src="assets/images/odyssey/square.png">
+					    			</div>
+					    			<div class="row project-info-container">
+					    				<div class="row project-info-title">
+					    				Odyssey (2016)
+						    			</div>
+						    			<div class="row project-info-desc">
+						    				audio, websockets, animation
+						    			</div>
+					    			</div>
+					    		</div>
+					    		<div class="col col-3 project">
+					    			<div class="row project-image">
+					    				<img src="assets/images/html/thumb.png">
+					    			</div>
+					    			<div class="row project-info-container">
+					    				<div class="row project-info-title">
+					    				Pure HTML (2016)
+						    			</div>
+						    			<div class="row project-info-desc">
+						    				html
+						    			</div>
+					    			</div>
+					    		</div>
+					    	</div>
+					    </div>
+		    		</div>
+			    <!-- </section> -->
+		    </div>
+	   
+	    
+
+	    <!-- <header>
+	    	<div class="row">
+			    <div class="col col-3">
+			    	<div class="row" id="logo-heading">
+			    		<div class="col" id="logo-heading-text">kevin.z.li</div>
+			    	</div>
+			    	<div class="row auto" id="logo-subheading">
+			    		<div class="col">part developer | part creative</div>
+			    	</div>
+			    </div>
+			    <div class="col col-6 offset-3" id="nav">
+			        <div class="row auto">
+			            <div class="col nav-link"><a href="portfolio.html">Portfolio</a></div>
+			            <div class="col nav-link"><a href="about.html">About</a></div>
+			            <div class="col nav-link"><a href="resume.html">Resume</a></div>
+			            <div class="col nav-link"><a href="blog.html">Blog</a></div>
+			        </div>
+			    </div>
+			</div>
+	    </header> -->
+	    
+	<!--     <section id="content">
+	    	<div class="row">
+			    <div class="col col-3">creative</div>
+			    <div class="col col-6">...</div>
+			   	<div class="col col-3">developer</div>
+			</div>
+	    </section> -->
+
+	    <footer>
+
+	    </footer>
+	</div>
+
+	<script type="text/javascript" src="js/script.js"></script>
+	<script src="http://vjs.zencdn.net/5.19.2/video.js"></script>
+    <!-- Kube JS + jQuery are used for some functionality, but are not required for the basic setup -->
+    <script src="js/kube.js"></script>
+</body>
+</html>
