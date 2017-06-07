@@ -121,6 +121,29 @@ body {
 	height: 400px;
 }
 
+.project-photos {
+    height:400px;
+    width:100%;
+    border:10px solid black;
+    text-align:left;
+    white-space: nowrap;
+    overflow-y:hidden;
+}
+
+.image-holder {
+    /*width:100%;*/
+    margin:2px;
+    display: inline-block;
+    overflow:hidden;
+    margin-left:8px;
+    height: 100%;
+}
+
+.project-photos img {
+	height: 100%;
+	/*padding-right: 15px;*/
+	/*display: inline-block;*/
+}
 
 .project-synopsis-label {
 	padding-bottom: 5px;

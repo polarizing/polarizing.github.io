@@ -100,7 +100,7 @@ class ProceduralTree {
 
         var textureLoader = new THREE.TextureLoader();
         // Create material.
-        var leafTexture = textureLoader.load("../assets/textures/pink.png");
+        var leafTexture = textureLoader.load("assets/textures/pink.png");
         leafTexture.anisotropy = 0;
         leafTexture.magFilter = THREE.NearestFilter;
         leafTexture.minFilter = THREE.NearestFilter;
@@ -116,7 +116,7 @@ class ProceduralTree {
 // 
         // this.trunkMaterial = new THREE.MeshBasicMaterial( { color: 0x666666, wireframe: true, wireframeLinewidth: 0.25 } );
 
-        var trunkTexture = textureLoader.load("../assets/textures/bark.jpg");
+        var trunkTexture = textureLoader.load("assets/textures/bark.jpg");
         this.trunkMaterial = new THREE.MeshPhongMaterial( { color: 0xffffff, map: trunkTexture });
         this.trunkMaterial.doubleSided = true;
         this.trunkMaterial.transparent = true;
