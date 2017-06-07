@@ -54,13 +54,13 @@ $(".project").each(function () {
 	    			if (currentDrawer) {
 	    				$(currentDrawer).slideUp(500, function() {
 	    					$('html, body').animate({
-						        scrollTop: $(clickedProject).offset().top - 25
+						        scrollTop: $(clickedProject).offset().top - 10
 						    }, 1000);
 	    					$(newDrawer).slideDown(500);
 	    				})
 	    			} else {
 	    				$('html, body').animate({
-						        scrollTop: $(clickedProject).offset().top - 25
+						        scrollTop: $(clickedProject).offset().top - 10
 						    }, 1000);
 	    				$(newDrawer).slideDown(500);
 	    			}
