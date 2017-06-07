@@ -111,7 +111,7 @@ body {
 
 .project-video-container {
 	padding-top: 15px;
-	padding-bottom: 5px;
+	padding-bottom: 15px;
 }
 .project-link-container {
 	padding-top: 5px;
@@ -132,6 +132,10 @@ body {
 .project-synopsis {
 	font-size: 14px;
 	line-height: 1.2;
+}
+
+.project-detail {
+	display: none;
 }
 
 #my-video {
@@ -157,9 +161,11 @@ body {
 	background:white;
 	color: black;
 	display: block;
-	width: 17.5%;
-	padding: 10px;
+	width: 100%;
+	font-size: 16px;
+	padding: 6px;
 	cursor: pointer;
+
 }
 
 .project-link:hover {

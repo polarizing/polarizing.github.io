@@ -5,6 +5,7 @@ var currentDrawerId = -1;
 var currentDrawer = undefined;
 var currentProjectId = -1;
 var currentProject = undefined;
+var currentProjectDetail = undefined;
 
 $(".project").each(function () {
     var project = this;
@@ -16,12 +17,28 @@ $(".project").each(function () {
     	var projectId = $(project).data("id");
     	var clickedProject = this;
 
-    	// if (currentProjectId !== projectId) {
-    	// 	if (currentProject) {
-    	// 		$(currentProject).find('img').css('filter', 'grayscale(100%)');
-    	// 	}
-    	// 	$(this).find('img').css('filter', 'none');
-    	// }
+    	// Check if clicked on different project.
+    	if (currentProjectId !== projectId) {
+    		// Swap project detail.
+    		if (currentProjectDetail) {
+    			$(currentProjectDetail).hide();
+    		}
+
+    		$(".project-detail").each(function() {
+	    		var projectDetail = this;
+	    		var projectDetailId = $(this).data("id");
+	    		if (projectDetailId === projectId) {
+	    			$(projectDetail).show();
+	    			currentProjectDetail = projectDetail;
+	    		}
+	    	})
+	    	
+    		currentProject = clickedProject;
+	    	currentProjectId = projectId;
+
+    	}
+
+    	
 
     	if (currentDrawerId !== drawerId) {
 			$(".drawer").each(function() {
@@ -37,22 +54,19 @@ $(".project").each(function () {
 	    			if (currentDrawer) {
 	    				$(currentDrawer).slideUp(500, function() {
 	    					$('html, body').animate({
-						        scrollTop: $(clickedProject).offset().top - 100
+						        scrollTop: $(clickedProject).offset().top - 25
 						    }, 1000);
 	    					$(newDrawer).slideDown(500);
 	    				})
 	    			} else {
 	    				$('html, body').animate({
-						        scrollTop: $(clickedProject).offset().top - 100
+						        scrollTop: $(clickedProject).offset().top - 25
 						    }, 1000);
 	    				$(newDrawer).slideDown(500);
 	    			}
 	    			currentDrawer = newDrawer;
 	    		}
 	    	})
-
-    		currentProject = clickedProject;
-    		currentProjectId = projectId;
 
 	    	currentDrawerId = drawerId;
     	}
