@@ -1,11 +1,37 @@
 
 // document.getElementById("bgAudio").volume = 0.075;
 
+
+
 var currentDrawerId = -1;
 var currentDrawer = undefined;
 var currentProjectId = -1;
 var currentProject = undefined;
 var currentProjectDetail = undefined;
+
+$(document).click(function(event) { 
+    if(!$(event.target).closest('.strip').length) {
+    	if (currentDrawer) {
+			$(currentDrawer).slideUp(500, function() {
+				// $('html, body').animate({
+			 //        scrollTop: $(clickedProject).offset().top - 10
+			 //    }, 1000);
+				// $(newDrawer).slideDown(500);
+			})
+		} 
+		$(".project").each(function() {
+			var project = this;
+			$(project).fadeTo(500, 1.0, function() {})
+			$(project).find("img").css("filter", "grayscale(100%)");
+		})
+
+		currentDrawerId = -1;
+		currentDrawer = undefined;
+		currentProjectId = -1;
+		currentProject = undefined;
+		currentProjectDetail = undefined;
+    }        
+})
 
 $(".project").each(function () {
     var project = this;
