@@ -13,15 +13,18 @@ $(".project").each(function () {
     // xPos = drag.offsetWidth / 2;
   //   // yPos = drag.offsetHeight / 2;
     $(project).on('click', function() {
+
     	var drawerId = $(project).data("drawer");
     	var projectId = $(project).data("id");
     	var clickedProject = this;
-
+        $(project).find("img").css("filter", "none");
+        
     	// Check if clicked on different project.
     	if (currentProjectId !== projectId) {
     		// Swap project detail.
     		if (currentProjectDetail) {
     			$(currentProjectDetail).hide();
+                $(currentProject).find("img").css("filter", "grayscale(100%)");
     		}
 
     		$(".project-detail").each(function() {
@@ -32,7 +35,6 @@ $(".project").each(function () {
 	    			currentProjectDetail = projectDetail;
 	    		}
 	    	})
-	    	
     		currentProject = clickedProject;
 	    	currentProjectId = projectId;
 
@@ -81,49 +83,7 @@ $(".project").each(function () {
     			$(project).fadeTo(500, 0.25, function() {})
     		}
     	})
-    	// console.log(drawer);
-    	
-    	// if (drawerId = 1) {
 
-    	// }
-    	// console.log('strip');
-  //   	var clickedProject = this;
-		// 	$('.drawer').slideDown(1000);
-
-		// $( ".project" ).each(function() {
-  //   		var project = this;
-  //   		if (clickedProject === project) {
-  //   			console.log('found');
-  //   		} else {
-  //   			$(project).fadeTo(1000, 0.25, function() {})
-  //   		}
-    		// project.animate({
-    		// 	opacity: 0.25
-    		// }, 5000, function() {
-
-    		// })
     })
 
-    // project.addEventListener("click", function() {
-    //     event.preventDefault();
-    //     // console.log("hi");
-    //     var currProject = this;
-    //     $('#drawer-1').slideDown(1000);
-    //     // $(this).css({
-    //     //   'left' : event.targetTouches[0].pageX - xPos + 'px', 
-    //     //   'top' : event.targetTouches[0].pageY - yPos + 'px'
-    //     // });
-    // 	$( ".project" ).each(function() {
-    // 		var project = this;
-    // 		$(project).fadeTo(1000, 0.25, function() {})
-    // 		// project.animate({
-    // 		// 	opacity: 0.25
-    // 		// }, 5000, function() {
-
-    // 		// })
-    // 	});
-    		
-
-    	// $('body').fadeTo(5000, 0.0, function() {})
-    // });
 })
