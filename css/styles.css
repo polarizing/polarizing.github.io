@@ -192,10 +192,21 @@ body {
 
 }
 
-.project-link:hover {
+.project-link:hover{
 	background: #FFC107;
 	color: white;
 	transition: background 1s, color 1s;
+}
+
+.project-link a {
+	color: black;
+	text-decoration: none;
+}
+
+.project-link:hover a{
+	/*color: #e5e5e5;*/
+	text-decoration: none;
+
 }
 
 
