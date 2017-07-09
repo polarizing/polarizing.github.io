@@ -3,12 +3,20 @@
     src: url(../assets/fonts/ahamono.otf);
 }
 
-body {
+html, body {
+	height: 100%;
 	font-family: 'Inconsolata';
 	font-size: 18px;
 	/* black scheme*/
 	background:black;
 	color:white;
+}
+
+body.prevent-scroll {
+  position: fixed;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
 }
 
 .controls-wrapper {
@@ -98,6 +106,21 @@ body {
 .project-image:hover img{
 	filter: none;
 	transition: filter 0.5s;
+}
+
+@media (max-width: 768px) {
+  .drawer {
+    /*display: none;*/
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    z-index: 4000;
+    overflow: scroll;
+  }
+
 }
 
 .drawer {

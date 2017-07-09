@@ -1,6 +1,24 @@
 
 // document.getElementById("bgAudio").volume = 0.075;
 
+// media query event handler
+// if (matchMedia) {
+//   var mq = window.matchMedia("(max-width: 768px)");
+//   mq.addListener(WidthChange);
+//   WidthChange(mq);
+// }
+
+// // media query change
+// function WidthChange(mq) {
+//   if (mq.matches) {
+//     // window width is at least 768px
+//         console.log('less than 768')
+
+//   } else {
+//     // window width is more than 768px
+//     console.log('more than 768')
+//   }
+// }
 
 
 var currentDrawerId = -1;
@@ -39,6 +57,15 @@ $(".project").each(function () {
     // xPos = drag.offsetWidth / 2;
   //   // yPos = drag.offsetHeight / 2;
     $(project).on('click', function() {
+    	var windowWidth = $(window).width();
+    	if (windowWidth <= 768) {
+    		console.log('mobile');
+			$(".project-row").fadeTo("fast", 0.25, function() {
+  				// Animation complete.''
+			});
+
+			// $("body").addClass("prevent-scroll");
+    	}
 
     	var drawerId = $(project).data("drawer");
     	var projectId = $(project).data("id");
