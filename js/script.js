@@ -40,7 +40,6 @@ $(document).click(function(event) {
 		$(".project").each(function() {
 			var project = this;
 			$(project).fadeTo(500, 1.0, function() {})
-			$(project).find("img").css("filter", "grayscale(100%)");
 		})
 
 		currentDrawerId = -1;
@@ -70,14 +69,12 @@ $(".project").each(function () {
     	var drawerId = $(project).data("drawer");
     	var projectId = $(project).data("id");
     	var clickedProject = this;
-        $(project).find("img").css("filter", "none");
         
     	// Check if clicked on different project.
     	if (currentProjectId !== projectId) {
     		// Swap project detail.
     		if (currentProjectDetail) {
     			$(currentProjectDetail).hide();
-                $(currentProject).find("img").css("filter", "grayscale(100%)");
     		}
 
     		$(".project-detail").each(function() {
