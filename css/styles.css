@@ -30,8 +30,8 @@ html, body {
 	font-family: 'Inconsolata';
 	font-size: 18px;
 	/* black scheme*/
-	/*background:black;*/
-	/*color:white;*/
+	background:black;
+	color:white;
 }
 
 body.prevent-scroll {
@@ -47,7 +47,7 @@ body.prevent-scroll {
 
 ::selection {
 	color: white;
-	background: black; 
+	background: white;
 }
 
 
@@ -122,8 +122,9 @@ body.prevent-scroll {
 }
 
 .work-section-label {
-	margin-bottom: 22px;
-	font-size: 28px;
+	/*padding-top: 10px;*/
+	padding-bottom: 15px;
+	font-size: 24px;
 }
 .project-row {
 	/*margin-top: 10px;*/
@@ -169,7 +170,12 @@ body.prevent-scroll {
 	display:block;
 	width:100%;
 	text-align:left;
+<<<<<<< HEAD
 	color: black;
+=======
+	/*Black scheme*/
+	color: #FFC107;
+>>>>>>> c8964594803b8f3028f516e1779e714d50b90e0a
 }
 .project-info-desc {
 	/*height: 30px;*/
@@ -361,12 +367,10 @@ body.prevent-scroll {
 	text-transform: uppercase;
 	font-weight: 700;
 	letter-spacing: 6px;
-	margin-bottom: 8px;
 }
 
 #logo-heading-text {
 	margin: 0 auto;
-	color: white;
 }
 
 #logo-subheading {
