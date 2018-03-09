@@ -1,3 +1,25 @@
+
+/*
+ *  STYLE 8
+ */
+
+::-webkit-scrollbar-track
+{
+	border: 1px solid black;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	background-color: #000000;	
+}
+
 @font-face {
     font-family: Ahamono;
     src: url(../assets/fonts/ahamono.otf);
@@ -28,6 +50,41 @@ body.prevent-scroll {
 	background: black; 
 }
 
+
+.header {
+	margin: 0 auto;
+	text-align: center;
+	padding-bottom: 50px;
+	font-size: 20px;
+}
+
+.header a.selected{
+	background: black;
+	color: white;
+	padding: 10px;
+	/*padding-top:100px;*/
+	border: 1px solid black;
+}
+
+.header a {
+	/*background: black;*/
+	color: black;
+	padding: 10px;
+	/*padding-top:100px;*/
+	border: 1px solid black;
+}
+
+.header a:hover {
+	background: black;
+	color: white;
+}
+
+.more {
+	text-align:center;
+	color: black;
+}
+
+
 #sketch-holder {
 	position:absolute;
 	z-index: -1000;
@@ -36,7 +93,32 @@ body.prevent-scroll {
 #main {
 	margin: auto;
 	max-width: 1200px;
+	padding: 100px;
+}
+
+#profile-pic {
+    border-radius: 50%;
+    width: 115px;
+    height: 115px;
+    position:absolute;
+     margin: auto;
+      left: 0; right: 0;
+}
+.intro {
+	/*background: black;*/
+	color:black;
 	padding: 50px;
+	margin: 160px;
+	margin-left: 160px;
+	margin-right: 160px;
+	margin-top: 160px;
+	margin-bottom: 80px;
+	line-height: 1.6;
+}
+.intro-bold {
+	font-weight: 700;
+	color: black;
+	text-transform: uppercase;
 }
 
 .work-section-label {
@@ -51,29 +133,49 @@ body.prevent-scroll {
 	font-size: 14px;
 }
 
+.project {
+	padding: 5px;
+	margin-bottom:25px;
+
+
+}
+.project a {
+		color: white;
+		text-decoration: none;
+}
 .project-info-container {
 	padding-top: 10px;
 	padding-bottom: 15px;
-	/*padding-left: 15px;*/
-	/*padding-right: 20px;*/
-	text-align:right;
+	padding-left: 15px;
+	padding-right: 20px;
+	border-width: 1px;
+	border-style: groove;
+	border-color: white;
+	/*background:black;*/
+	/*position:absolute;*/
+}
+
+.project:hover .project-info-container{
+		border-color:black;
+}
+.project:hover .project-image{
+		border-color:black;
 }
 
 .project-info-title {
 	/*height: 30px;*/
-	font-size: 15px;
+	font-size: 18px;
 	line-height: 1.05;
 	display:block;
 	width:100%;
 	text-align:left;
-	/*Black scheme*/
-	/*color: #FFC107;*/
+	color: black;
 }
 .project-info-desc {
 	/*height: 30px;*/
-	font-size: 13px;
+	font-size: 15px;
 	line-height: 1.05;
-	color: #cccccc;
+	color: #aaaaaa;
 	display:block;
 	width:100%;
 	text-align:left;
@@ -84,6 +186,10 @@ body.prevent-scroll {
 }
 
 .project-image {
+	border-width: 1px;
+	border-style: groove;
+	border-color: white;
+	border-bottom: none;
 	cursor: pointer;
 	height: 250px;
 	/*flex: 0 0 200px;*/
@@ -98,8 +204,6 @@ body.prevent-scroll {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-	/* filter: grayscale(100%); */
-	transition: filter 3s;
 }
 
 .project-image:hover img{
@@ -168,15 +272,17 @@ body.prevent-scroll {
 }
 
 .project-synopsis-label {
-	padding-bottom: 5px;
+	margin-bottom: 15px;
+	font-size: 20px;
 }
 
 .project-video-label {
-	padding-bottom: 5px;
+	margin-bottom: 15px;
+	font-size: 20px;
 }
 
 .project-synopsis {
-	font-size: 14px;
+	font-size: 16px;
 	line-height: 1.2;
 }
 
@@ -204,31 +310,32 @@ body.prevent-scroll {
 */
 .project-link {
 	text-align:center;
-	background:white;
+	background: white;
 	color: black;
 	display: block;
 	width: 100%;
 	font-size: 16px;
 	padding: 6px;
 	cursor: pointer;
+	border: 1px solid black;
 
 }
 
 .project-link:hover{
-	background: #FFC107;
-	color: white;
-	transition: background 1s, color 1s;
+	background: black;
+	color: black;
+	transition: background 1s;
 }
 
 .project-link a {
-	color: black;
 	text-decoration: none;
+	color: black;
 }
 
 .project-link:hover a{
-	/*color: #e5e5e5;*/
+	color: #e5e5e5;
 	text-decoration: none;
-
+	transition: color 1s;
 }
 
 

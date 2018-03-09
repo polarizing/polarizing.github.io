@@ -28,225 +28,95 @@
     </div>
 	<div id="main">
 	 
+<img src="assets/images/profile.jpg" id="profile-pic" alt="Profile Picture">
 
 	    <!-- <h1>Hello, world!</h1> -->
 	    	<div class="row gutters">
-	    		<!-- <section id="left"> -->
-			    	<div class="col col-3">
-			    		<div class="row" id="logo-heading">
-				    		<div class="col" id="logo-heading-text">kevin.z.li</div>
-				    	</div>
-				    	<div class="row auto" id="logo-subheading">
-				    		<div class="col">developer | creative technologist</div>
-				    	</div>
-
-				    	<div class="row">
-				    		<!-- I love to script in Python. -->
-				    	</div>
-				  <!--   	 <div class="row auto nav-link"><a href="portfolio.html">Portfolio</a></div>
-				         <div class="row auto nav-link"><a href="portfolio.html">About</a></div>
-				    	 <div class="row auto nav-link"><a href="portfolio.html">Resume</a></div>
-				    	 <div class="row auto nav-link"><a href="portfolio.html">Blog</a></div>
-	 -->
-			    	</div>
-			   	<!-- </section> -->
-			   	 <!-- <section id="right"> -->
-
-			   	 	<div class="col col-9">
-
-			   	 		<div class="row work-section-label">
-			   	 			Selected Works
+			   	 	<div class="col col-12">
+			   	 		<div class="row top auto">
+			   	 		<div class="row intro">
+			   	 			<div class="intro-bold">Hello --</div>
+			   	 			<div>My name's Kevin and I'm a Software Engineer and Creative Technologist based in New York. I'm currently studying Computer Science and Interactive Media Arts at New York University. I was a former intern at <a href="http://www.italki.com"><img style="width:35px;height:21px;position:relative;top:5px;" src="assets/images/italki.png"></a>.</div>
 			   	 		</div>
+			   	 	</div>
 
+			   	 	<div class="header-anchor" id="work"></div>
+			   	 	<div class="header" >
+						<a href="#work" class="">Recent Work</a>
+						<!-- <a href="">Blog</a> -->
+					</div>
 			   	 		<div class="strip">
-
-			   	 			<div class="row gutters auto project-row">
-					    		<div class="col col-3 project" data-drawer="1" data-id="1" data-project-title="metempsychosis">
-					    			<div class="row project-image">
-					    				<img src="assets/images/metempsychosis/thumb.jpg">
-					    			</div>
-					    			<div class="row project-info-container">
-					    				<div class="row project-info-title">
-					    				Metempsychosis (2017)
+			   	 			<div class="row auto project-row">
+				   	 			<div class="col col-3 project">
+			   	 					<a href="metempsychosis.html">
+						    			<div class="row project-image">
+						    				<img src="assets/images/metempsychosis/thumb.jpg">
 						    			</div>
-						    			<div class="row project-info-desc">
-						    				webgl, three.js, gpgpu, audio-reactive
+						    			<div class="row project-info-container">
+						    				<div class="row project-info-title">
+						    				Metempsychosis (2017)
+							    			</div>
+							    			<div class="row project-info-desc">
+							    				webgl, three.js, gpgpu, audio-reactive
+							    			</div>
 						    			</div>
-					    			</div>
-					    			
+			   	 					</a>
+						    	</div>						    		
+					    		<div class="col col-3 project">
+					    			<a href="memory.html">
+						    			<div class="row project-image">
+						    				<img src="assets/images/memory/thumb.jpg">
+						    			</div>
+						    			<div class="row project-info-container">
+						    				<div class="row project-info-title">
+						    				Ex-Memory (2017)
+							    			</div>
+							    			<div class="row project-info-desc">
+							    				projection mapping, interactive video
+							    			</div>
+						    			</div>
+						    		</a>
 					    		</div>
-					    		<div class="col col-3 project" data-drawer="1" data-id="2" data-project-title="memory">
-					    			<div class="row project-image">
-					    				<img src="assets/images/memory/thumb.jpg">
-					    			</div>
-					    			<div class="row project-info-container">
-					    				<div class="row project-info-title">
-					    				Ex-Memory (2017)
-						    			</div>
-						    			<div class="row project-info-desc">
-						    				projection mapping, interactive video
-						    			</div>
-					    			</div>
-					    		</div>
-					    		<div class="col col-3 project" data-drawer="1" data-id="3" data-project-title="tree">
-					    			<div class="row project-image">
-					    				<img src="assets/images/tree/thumb.png">
-					    			</div>
-					    			<div class="row project-info-container">
-					    				<div class="row project-info-title">
-					    				Particle Tree (2017)
-						    			</div>
-						    			<div class="row project-info-desc">
-						    				three.js, computational geometry
-						    			</div>
-					    			</div>
-					    		</div>
-					    	</div>
+					    		<div class="col col-3 project">
+					    			<a href="tree.html">
 
-					    	<div class="row drawer" data-id = "1">
-					    		<div class="project-detail" data-id="1">
-					    			<div class="project-synopsis-container">
-					    				<div class="row project-synopsis-label">Project Synopsis</div>
-					    				<div class="row project-synopsis">
-					    					An experimental simulation of the afterlife coded in WebGL using the GPGPU and FBO to render 262k particles in real-time. It uses curl noise, simulated gravitational attraction, and time to define and distort parametric surfaces and 3D models.
-					    				</div>
-					    			</div>
-					    			<div class="project-video-container">
-					    				<div class="row project-video-label">Video</div>
-					    				<div class="row project-video">
-					    				 <video id="my-video" class="video-js" controls preload="auto" width="100%" height="100%"
-										  poster="assets/videos/metempsychosis/poster.png" data-setup='{"fluid": true}'>
-										    <source src="assets/videos/metempsychosis/reel.mp4" type='video/mp4'>
-										    <!-- <source src="MY_VIDEO.webm" type='video/webm'> -->
-										    <p class="vjs-no-js">
-										      To view this video please enable JavaScript, and consider upgrading to a web browser that
-										      <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-										    </p>
-										  </video>
-					    					<!-- <iframe src="https://player.vimeo.com/video/218256671" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
-					    				</div>
-
-					    			</div>
-					    			<div class="project-link-container">
-						    			<div class="project-link">
-						    				<a target="_blank" href="work/metempsychosis/index.html">View Project</a>
+						    			<div class="row project-image">
+						    				<img src="assets/images/tree/thumb.png">
 						    			</div>
-					    			</div>
-
-					    		</div>
-					    		<div class="project-detail" data-id="2">
-					    			<div class="project-synopsis-container">
-					    				<div class="row project-synopsis-label">Project Synopsis</div>
-					    				<div class="row project-synopsis">
-					    					An interactive film set in the future. Year 3001. Artificial intelligence has taken over the world. A world in which memories are very sought after. You are a memory extraction operator. Your sole task is to monitor, observe and extract his memories from behind the machine. Video shot with Canon EOS 20D and edited in Adobe Premiere. Projection mapping on the body done with Processing, MadMapper and high-resolution projector. Three.JS used for outro.
-					    				</div>
-					    			</div>
-					    			<div class="project-photo-container">
-					    				<div class="row project-Photo-label">Images</div>
-					    				<div class=" project-photos">
-											 <!--    <div class="image-holder">
-											    	<img src="assets/images/memory/thumb/0.png">
-											    </div> -->
-											    <div class="image-holder">
-											    	<img src="assets/images/memory/thumb/1.png">
-											    </div>
-											    <div class="image-holder">
-											    	<img src="assets/images/memory/thumb/2.png">
-											    </div>
-											    <div class="image-holder">
-											    	<img src="assets/images/memory/thumb/3.png">
-											    </div>
-											    <div class="image-holder">
-											    	<img src="assets/images/memory/thumb/4.png">
-											    </div>
-											    <div class="image-holder">
-											    	<img src="assets/images/memory/thumb/5.png">
-											    </div>
-											    <div class="image-holder">
-											    	<img src="assets/images/memory/thumb/6.png">
-											    </div>
-											    <div class="image-holder">
-											    	<img src="assets/images/memory/thumb/7.png">
-											    </div>
-											    <div class="image-holder">
-											    	<img src="assets/images/memory/thumb/8.png">
-											    </div>
-					    				</div>
-					    			</div>
-					    			<!-- <div class="project-video-container">
-					    				<div class="row project-video-label">Video</div>
-					    				Images
-					    				<div class="row project-video">
-					    				 <video id="my-video" class="video-js" controls preload="auto" width="100%" height="100%"
-										  poster="assets/videos/metempsychosis/poster.png" data-setup='{"fluid": true}'>
-										    <source src="assets/videos/metempsychosis/reel.mp4" type='video/mp4'>
-										    <p class="vjs-no-js">
-										      To view this video please enable JavaScript, and consider upgrading to a web browser that
-										      <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-										    </p>
-										  </video>
-					    				</div>
-
-					    			</div> -->
-					    		<!-- 	<div class="project-link-container">
-						    			<div class="project-link">
-						    				View Project
+						    			<div class="row project-info-container">
+						    				<div class="row project-info-title">
+						    				Particle Tree (2017)
+							    			</div>
+							    			<div class="row project-info-desc">
+							    				three.js, computational geometry
+							    			</div>
 						    			</div>
-					    			</div> -->
-
-					    		</div>
-					    		<div class="project-detail" data-id="3">
-					    			<div class="project-synopsis-container">
-					    				<div class="row project-synopsis-label">Project Synopsis</div>
-					    				<div class="row project-synopsis">
-					    					A 3D tree mesh is analyzed using octree spatial partitioning to find the tips of branches (leaves) grouped by vertices. Colored dancing particles attract and repulse from the leaves in cheerful music. Coded in Three.JS.
-					    				</div>
-					    			</div>
-					    			<div class="project-video-container">
-					    				<div class="row project-video-label">Video</div>
-					    				<div class="row project-video">
-					    				 <video id="my-video" class="video-js" controls preload="auto" width="100%" height="100%"
-										  poster="assets/videos/tree/poster.png" data-setup='{"fluid": true}'>
-										    <source src="assets/videos/tree/reel.mp4" type='video/mp4'>
-										    <!-- <source src="MY_VIDEO.webm" type='video/webm'> -->
-										    <p class="vjs-no-js">
-										      To view this video please enable JavaScript, and consider upgrading to a web browser that
-										      <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-										    </p>
-										  </video>
-					    					<!-- <iframe src="https://player.vimeo.com/video/218256671" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
-					    				</div>
-
-					    			</div>
-					    			<div class="project-link-container">
-						    			<div class="project-link">
-						    				<a target="_blank" href="work/tree/index.html">View Project</a>
-						    			</div>
-					    			</div>
-
+					    				</a>
 					    		</div>
 					    	</div>
-
 			   	 		</div>
 				    	
 				    	<div class="strip">
 				    		
-					    	<div class="row gutters auto project-row">
-					    		
-					    		<div class="col col-3 project" data-id="4" data-drawer="2" data-project-title="coffee">
-					    			<div class="row project-image">
-					    				<img src="assets/images/coffee/thumb.jpg">
-					    			</div>
-					    			<div class="row project-info-container">
-					    				<div class="row project-info-title">
-					    				Coffee Ethan (2017)
+					    	<div class="row auto project-row">
+					    		<div class="col col-3 project">
+					    			<a href="coffee.html">
+
+						    			<div class="row project-image">
+						    				<img src="assets/images/coffee/thumb.jpg">
 						    			</div>
-						    			<div class="row project-info-desc">
-						    				audio, animation
+						    			<div class="row project-info-container">
+						    				<div class="row project-info-title">
+						    				Coffee Ethan (2017)
+							    			</div>
+							    			<div class="row project-info-desc">
+							    				audio, animation
+							    			</div>
 						    			</div>
-					    			</div>
+						    		</a>
 					    		</div>
-					    		<div class="col col-3 project" data-id="5" data-drawer="2" data-project-title="crane">
+					    		<div class="col col-3 project">
+					    			<a href="crane.html">
 					    			<div class="row project-image">
 					    				<img src="assets/images/crane/thumb.jpg">
 					    			</div>
@@ -255,12 +125,14 @@
 					    					Paper Crane Cards <span class="chinese">亲情鹤卡</span> (2017)
 						    			</div>
 						    			<div class="row project-info-desc">
-						    				design thinking, UI/UX, sketch
+						    				design thinking, UI/UX, Sketch
 						    			</div>
 					    			</div>
+					    		</a>
 					    			
 					    		</div>
-					    		<div class="col col-3 project" data-id="6" data-drawer="2" data-project-title="glockenspiel">
+					    		<div class="col col-3 project">
+					    			<a href="glockenspiel.html">
 					    			<div class="row project-image">
 					    				<img src="assets/images/glockenspiel/thumb.jpg">
 					    			</div>
@@ -272,192 +144,25 @@
 						    				node.js, arduino, websockets
 						    			</div>
 					    			</div>
+					    		</a>
 					    		</div>
 					    		
 					    	</div>
-
-					    	<div class="row drawer" data-id = "2">
-					    		<div class="project-detail" data-id="4">
-					    			<div class="project-synopsis-container">
-					    				<div class="row project-synopsis-label">Project Synopsis</div>
-					    				<div class="row project-synopsis">
-					    					This project name is inspired by a friend of mine, Ethan, who on the first day of our coding bootcamp when we had to introduce our first name along with a mnemonic that matched the first initial of our name, decided that C and E were the same letters and said, "I am Coffee Ethan".
-					    				</div>
-					    			</div>
-					    			<div class="project-video-container">
-					    				<div class="row project-video-label">Video</div>
-					    				<div class="row project-video">
-					    				 <video id="my-video" class="video-js" controls preload="auto" width="100%" height="100%"
-										  poster="assets/videos/coffee/poster.png" data-setup='{"fluid": true}'>
-										    <source src="assets/videos/coffee/reel.mp4" type='video/mp4'>
-										    <p class="vjs-no-js">
-										      To view this video please enable JavaScript, and consider upgrading to a web browser that
-										      <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-										    </p>
-										  </video>
-					    					<!-- <iframe src="https://player.vimeo.com/video/218256671" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
-					    				</div>
-
-					    			</div>
-					    			<div class="project-link-container">
-						    			<div class="project-link">
-						    				<a target="_blank" href="work/coffee/index.html">View Project</a>
-						    			</div>
-					    			</div>
-
-					    		</div>
-					    		<div class="project-detail" data-id="5">
-					    			<div class="project-synopsis-container">
-					    				<div class="row project-synopsis-label">Project Synopsis</div>
-					    				<div class="row project-synopsis">
-					    					Runner-up of the 2017 Target Hackathon -- Designing a Mobile Application for Left Behind Children in China. Awarded second-place prize of ¥10000. The idea of the application is to facilitate and encourage communication between left behind children and their migrant parents through sending multimedia greeting cards -- these cards can have handwriting, photos, videos, and audio attached. An animated paper crane delivers these cards and encourages continued dialogue between the child and the parent.
-					    				</div>
-					    			</div>
-					    			<div class="project-photo-container">
-					    				<div class="row project-Photo-label">Photo</div>
-					    				<div class=" project-photos">
-											    <div class="image-holder">
-											    	<img src="assets/images/crane/thumb/0.jpg">
-											    </div>
-											    <div class="image-holder">
-											    	<img src="assets/images/crane/thumb/1.jpg">
-											    </div>
-											    <div class="image-holder">
-											    	<img src="assets/images/crane/thumb/2.jpg">
-											    </div>
-											    <div class="image-holder">
-											    	<img src="assets/images/crane/thumb/3.jpg">
-											    </div>
-											    <div class="image-holder">
-											    	<img src="assets/images/crane/thumb/4.jpg">
-											    </div>
-											    <div class="image-holder">
-											    	<img src="assets/images/crane/thumb/5.jpg">
-											    </div>
-											    <div class="image-holder">
-											    	<img src="assets/images/crane/thumb/6.jpg">
-											    </div>
-											    <div class="image-holder">
-											    	<img src="assets/images/crane/thumb/7.jpg">
-											    </div>
-											    <div class="image-holder">
-											    	<img src="assets/images/crane/thumb/8.jpg">
-											    </div>
-											    <div class="image-holder">
-											    	<img src="assets/images/crane/thumb/9.jpg">
-											    </div>
-											    <div class="image-holder">
-											    	<img src="assets/images/crane/thumb/10.jpg">
-											    </div>
-											    <div class="image-holder">
-											    	<img src="assets/images/crane/thumb/11.jpg">
-											    </div>
-											    <div class="image-holder">
-											    	<img src="assets/images/crane/thumb/12.jpg">
-											    </div>
-											     <div class="image-holder">
-											    	<img src="assets/images/crane/thumb/13.jpg">
-											    </div>
-											     <div class="image-holder">
-											    	<img src="assets/images/crane/thumb/14.jpg">
-											    </div>
-											     <div class="image-holder">
-											    	<img src="assets/images/crane/thumb/15.jpg">
-											    </div>
-											      <div class="image-holder">
-											    	<img src="assets/images/crane/thumb/16.jpg">
-											    </div>
-
-
-					    				 	<!-- <div class="image-holder">
-					    				 		<img src="assets/images/crane/thumb/0.jpg">
-					    				 	</div>
-					    				 	<div class="image-holder">
-					    				 		<img src="assets/images/crane/thumb/1.jpg">
-					    				 	</div>
-					    				 	<div class="image-holder">
-					    				 		<img src="assets/images/crane/thumb/2.jpg">
-					    				 	</div>
-					    				 	<div class="image-holder">
-					    				 		<img src="assets/images/crane/thumb/3.jpg">
-					    				 	</div> -->
-
-					    				</div>
-					    			</div>
+					    	<div class="more" >
+						<a href="#work" class="">See more of my work!</a>
+						<!-- <a href="">Blog</a> -->
+					</div>
 <!-- 
-					    			<div class="project-video-container">
-					    				<div class="row project-video-label">Video</div>
-					    				<div class="row project-video">
-					    				 <video id="my-video" class="video-js" controls preload="auto" width="100%" height="100%"
-										  poster="assets/videos/metempsychosis/poster.png" data-setup='{"fluid": true}'>
-										    <source src="assets/videos/metempsychosis/reel.mp4" type='video/mp4'>
-										    <p class="vjs-no-js">
-										      To view this video please enable JavaScript, and consider upgrading to a web browser that
-										      <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-										    </p>
-										  </video>
-					    				</div>
-
-					    			</div> -->
-
-					    			<div class="project-link-container">
-						    			<div class="project-link">
-						    				<a href="work/crane/final.pdf" download>View Project PPT [Download]</a>
-						    			</div>
-					    			</div>
-
-					    		</div>
-					    		<div class="project-detail" data-id="6">
-					    			<div class="project-synopsis-container">
-					    				<div class="row project-synopsis-label">Project Synopsis</div>
-					    				<div class="row project-synopsis">
-					    					Fifteen solenoids connected using an Arduino Mega are used to drive a robotic glockenspiel that a user can control wirelessly with their smartphone.
-The glockenspiel can be controlled via a virtual keyboard, a beatpad, or a force touch pressure sensitive display. The pressure sensitive mode can create ordered chaos, a new way of experiencing the sounds that a glockenspiel can make. It can also play pre-programmed songs. The songs in the demo are:
-Twinkle Twinkle, Jingle Bells, Mozart K330, Canon, Chao Ming.
-					    				</div>
-					    			</div>
-					    			<div class="project-video-container">
-					    				<div class="row project-video-label">Video</div>
-					    				<div class="row project-video">
-					    				 <video id="my-video" class="video-js" controls preload="auto" width="100%" height="100%"
-										  poster="assets/videos/glockenspiel/poster.png" data-setup='{"fluid": true}'>
-										    <source src="assets/videos/glockenspiel/reel.mp4" type='video/mp4'>
-										    <!-- <source src="MY_VIDEO.webm" type='video/webm'> -->
-										    <p class="vjs-no-js">
-										      To view this video please enable JavaScript, and consider upgrading to a web browser that
-										      <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-										    </p>
-										  </video>
-					    					<!-- <iframe src="https://player.vimeo.com/video/218256671" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
-					    				</div>
-
-					    			</div>
-					    		<!-- 	<div class="project-link-container">
-						    			<div class="project-link">
-						    				<a href="work/tree/index.html">View Project</a>
-						    			</div>
-					    			</div> -->
-
-					    		</div>
-					    	</div>
-
-
-					    </div>
-
-				    	<div class="row work-section-label">
-				    		Other Creative Works				    		
-				    	</div>
-
 				    	<div class="strip">
 					    		
-					    	<div class="row gutters auto project-row">
+					    	<div class="row auto project-row">
 					    		<div class="col col-3 project">
 					    			<div class="row project-image">
 					    				<img src="assets/images/paint/thumb.jpg">
 					    			</div>
 					    			<div class="row project-info-container">
 					    				<div class="row project-info-title">
-					    				Drip Drip (2017) [WIP]
+					    				Drip Drip (2017)
 						    			</div>
 						    			<div class="row project-info-desc">
 						    				html5, canvas
@@ -496,7 +201,7 @@ Twinkle Twinkle, Jingle Bells, Mozart K330, Canon, Chao Ming.
 
 					    <div class="strip">
 					    	
-					    	<div class="row gutters auto project-row">
+					    	<div class="row auto project-row">
 					    		<div class="col col-3 project">
 					    			<div class="row project-image">
 					    				<img src="assets/images/jam4/thumb.png">
@@ -538,7 +243,8 @@ Twinkle Twinkle, Jingle Bells, Mozart K330, Canon, Chao Ming.
 					    			</div>
 					    		</div>
 					    	</div>
-					    </div>
+					    </div> -->
+
 		    		</div>
 			    <!-- </section> -->
 		    </div>

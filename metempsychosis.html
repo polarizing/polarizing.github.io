@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kevin Li - Portfolio</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">    
+	<!-- Kube CSS -->
+
+    <link rel="stylesheet" href="css/kube.css">
+    <link rel="stylesheet" type="text/css" href="css/detail.css">
+      <link href="http://vjs.zencdn.net/5.19.2/video-js.css" rel="stylesheet">
+
+  <!-- If you'd like to support IE8 -->
+  <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/p5.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.dom.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.sound.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+</head>
+<body>
+	<!-- <audio src="assets/audio/bg.mp3" id="bgAudio" autoplay loop></audio> -->
+	
+	<div id="sketch-holder">
+      <!-- Our sketch will go here! -->
+    </div>
+	<div id="main">
+		<div class="header">
+			<a class="" href="index.html#work">WORK</a>
+			<!-- <a>Blog</a> -->
+		</div>
+		<div class="row gutters auto project-title-row">
+			<div class="col col-4">
+				
+			</div>
+			<div class="col col-8">
+				<div class="row project-info-title">
+    				Metempsychosis (2017)
+	    		</div>
+			</div>
+		</div>
+		<div class="row gutters auto project-row">
+			<div class="col col-4 media">
+				<div class="row project-info-container">
+					<div class="row project-info-type">
+						Video Installation
+	    			</div>
+	    			<div class="row project-info-desc">
+	    				webgl, three.js, gpgpu, audio-reactive
+	    			</div>
+	    			<div class="row project-info-location">
+						Spring Show, NYU, Shanghai, China
+	    			</div>
+    			</div>
+
+				<div class="project-synopsis-container">
+					<div class="row project-synopsis">
+						An experimental simulation of the afterlife coded in WebGL using the GPGPU and FBO to render 262k particles in real-time. It uses curl noise, simulated gravitational attraction, and time to define and distort parametric surfaces and 3D models. 
+					</div>
+				</div>
+			</div>
+			<div class="col col-8 description">
+				
+	    		<div class="project-video-container">
+    				<div class="row project-video">
+    				 <video id="my-video" class="video-js" controls preload="auto" width="100%" height="100%"
+					  poster="assets/videos/metempsychosis/poster.png" data-setup='{"fluid": true}'>
+					    <source src="assets/videos/metempsychosis/reel.mp4" type='video/mp4'>
+					    <!-- <source src="MY_VIDEO.webm" type='video/webm'> -->
+					    <p class="vjs-no-js">
+					      To view this video please enable JavaScript, and consider upgrading to a web browser that
+					      <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+					    </p>
+					  </video>
+					</div>
+				</div>
+
+				<div class="row project-detail">
+					<div>
+						These are some video stills of the simulation.
+					</div>
+				</div>
+
+				<div class="row project-image">
+					<img src="assets/images/metempsychosis/stills.png">
+				</div>
+
+				<div class="row project-detail">
+					<div class="project-detail-title">Inspiration</div>
+					<div class="project-detail-content">
+						<i>From dust you came, and to dust you shall return.</i> This simulation uses fluidity, oscillation, modulation, repetition, and randomness to create patterns that are visualised with particle dust. Each dust particle is simple and has a defined path, together they become chaotic, complex, and represent our temporal lives in transition. We have a very intimate connection with the tangible and the known. It is the unknown that begets creative exploration.
+					</div>
+					<div class="project-detail-title">Technicals</div>
+					<div class="project-detail-content">
+						The project is a study utilizing the power of the GPU to do more than simply render to the screen. We exploit the power of the architecture of the GPU to do parallel computation -- calculating and simulating millions of particles in real time. Whereas we typically use Frame Buffer Objects (FBOs) to hold RGBA values, we use them here to store XYZ position, velocity, and acceleration. This allows us to simulate and store particle position data in fragment shaders as textures in the GPU rather than as objects in the CPU, which allows for massive speed-ups due to parallelization.
+
+					</div>
+
+
+				</div>
+
+		</div>
+
+	<script type="text/javascript" src="js/script.js"></script>
+	<script src="http://vjs.zencdn.net/5.19.2/video.js"></script>
+    <!-- Kube JS + jQuery are used for some functionality, but are not required for the basic setup -->
+    <script src="js/kube.js"></script>
+</body>
+</html>

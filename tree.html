@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kevin Li - Particle Tree</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">    
+	<!-- Kube CSS -->
+
+    <link rel="stylesheet" href="css/kube.css">
+    <link rel="stylesheet" type="text/css" href="css/detail.css">
+      <link href="http://vjs.zencdn.net/5.19.2/video-js.css" rel="stylesheet">
+
+  <!-- If you'd like to support IE8 -->
+  <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/p5.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.dom.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.sound.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+</head>
+<body>
+	<!-- <audio src="assets/audio/bg.mp3" id="bgAudio" autoplay loop></audio> -->
+	
+	<div id="sketch-holder">
+      <!-- Our sketch will go here! -->
+    </div>
+	<div id="main">
+		<div class="header">
+			<a class="" href="index.html#work">WORK</a>
+			<!-- <a>Blog</a> -->
+		</div>
+		<div class="row gutters auto project-title-row">
+			<div class="col col-4">
+				
+			</div>
+			<div class="col col-8">
+				<div class="row project-info-title">
+						Particle Tree (2017)
+	    		</div>
+			</div>
+		</div>
+		<div class="row gutters auto project-row">
+			<div class="col col-4 media">
+				<div class="row project-info-container">
+					<div class="row project-info-type">
+						Creative Coding
+	    			</div>
+	    			<div class="row project-info-desc">
+						three.js, computational geometry, 3D modeling
+	    			</div>
+	    			<div class="row project-info-location">
+	    				Nature of Code
+	    			</div>
+	    			<div class="row project-info-synopsis">
+					    A 3D tree mesh is analyzed using octree spatial partitioning to find the tips of branches (leaves) grouped by vertices. Colored dancing particles attract and repulse from the leaves in cheerful music. Coded in Three.JS.
+					</div>
+    			</div>
+
+			</div>
+			<div class="col col-8 description">
+				<div class="project-video-container">
+					    				<div class="row project-video">
+					    				 <video id="my-video" class="video-js" controls preload="auto" width="100%" height="100%"
+										  poster="assets/videos/tree/poster.png" data-setup='{"fluid": true}'>
+										    <source src="assets/videos/tree/reel.mp4" type='video/mp4'>
+										    <!-- <source src="MY_VIDEO.webm" type='video/webm'> -->
+										    <p class="vjs-no-js">
+										      To view this video please enable JavaScript, and consider upgrading to a web browser that
+										      <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+										    </p>
+										  </video>
+					    					<!-- <iframe src="https://player.vimeo.com/video/218256671" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> -->
+					    				</div>
+
+					    			</div>
+<div class="row project-detail">
+					<div class="project-detail-title">Inspiration</div>
+					<div class="project-detail-content">
+						A tree is a beautiful attractor in nature. This project aims to study attractors by modeling different stages of attraction and repulsion. When attractors are positive, particles move with direction and purpose. When attractors are dampened, particles slow and ease. When there are waves of strong alternating attraction and repulsion, particles ebb and flow like waves and can become chaotic. When attractors are negative, particles slowly repulse and depart away.
+					</div>
+					<div class="project-detail-title">Technicals</div>
+					<div class="project-detail-content">
+						A procedural tree is generated using a library (proctree.js) which helped create tree meshes given a set of parameters. However, the specific locations of branches or twigs cannot be identified from sets of vertices, faces, UVs, and normals.
+					</div>
+								    <div class="image-holder">
+								    	<img src="assets/images/tree/ss.png">
+								    </div>
+
+
+					<div class="project-detail-content">
+						I decided to use a spacial algorithm known as an octree that can split a larger cube into eight octants if a vertex is contained within any of the octants. If it is, the point is added to that octant and that octant is recursively subdivided until a max-depth level is reached. We can then search the tree for the last leaf nodes (or last few levels) for the smallest boxes that encompass the vertices. This demonstrated the viability of using the octree algorithm to find clusters of vertices. The final bounding boxes represent vertices clustered closely together, which ended up being where the leaves and branches were modeled.
+					</div>
+
+								    <div class="image-holder">
+								    	<img src="assets/images/tree/octree_2.png">
+								    </div>
+					<div class="project-detail-content">
+						Some generative art using our newly computed data.
+					</div>
+
+							    <div class="image-holder">
+							    	<img src="assets/images/tree/octree_3.png">
+							    </div>
+
+					<div class="project-detail-content">
+						Our final task is to model attraction. The attraction model was adapted and adjusted from the book Generative Design by Hartmut Bohnacker.
+					</div>
+					<script src="https://gist.github.com/polarizing/e0bb7736fae03d29f81e55658dacf505.js"></script>
+					<div class="project-detail-content">
+						Attraction parameters are adjusted based on time to model the different stages of attraction and repulsion and scripted using THREE.JS.
+					</div>
+
+				</div>
+		</div>
+
+	<script type="text/javascript" src="js/script.js"></script>
+	<script src="http://vjs.zencdn.net/5.19.2/video.js"></script>
+    <!-- Kube JS + jQuery are used for some functionality, but are not required for the basic setup -->
+    <script src="js/kube.js"></script>
+</body>
+</html>
