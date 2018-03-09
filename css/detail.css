@@ -140,6 +140,9 @@ body.prevent-scroll {
 	font-size: 20px;
 }
 
+#my-video {
+	height: 100%;
+}
 .project-video-label {
 	margin-bottom: 15px;
 	font-size: 20px;
