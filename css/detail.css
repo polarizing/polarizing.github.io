@@ -222,3 +222,11 @@ body.prevent-scroll {
 	/*padding-right: 15px;*/
 	/*display: inline-block;*/
 }
+
+
+@media (max-width: 768px) {
+  #main {
+  	padding: 30px;
+
+  }
+}

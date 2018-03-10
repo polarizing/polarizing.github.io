@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Kevin Li - Drip Drip</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700" rel="stylesheet">    
+	<!-- Kube CSS -->
+
+    <link rel="stylesheet" href="css/kube.css">
+    <link rel="stylesheet" type="text/css" href="css/detail.css">
+      <link href="http://vjs.zencdn.net/5.19.2/video-js.css" rel="stylesheet">
+
+  <!-- If you'd like to support IE8 -->
+  <script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/p5.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.dom.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.11/addons/p5.sound.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+</head>
+<body>
+	<!-- <audio src="assets/audio/bg.mp3" id="bgAudio" autoplay loop></audio> -->
+	
+	<div id="sketch-holder">
+      <!-- Our sketch will go here! -->
+    </div>
+	<div id="main">
+		<div class="header">
+			<a class="" href="index.html#work">WORK</a>
+			<!-- <a>Blog</a> -->
+		</div>
+		<div class="row gutters auto project-title-row">
+			<div class="col col-4">
+				
+			</div>
+			<div class="col col-8">
+				<div class="row project-info-title">
+						Drip Drip (2017)
+	    		</div>
+			</div>
+		</div>
+		<div class="row gutters auto project-row">
+			<div class="col col-4 media">
+				<div class="row project-info-container">
+					<div class="row project-info-type">
+						Creative Coding, Internet Art
+	    			</div>
+	    			<div class="row project-info-desc">
+						p5.js, HTML5 Canvas, socket.io
+	    			</div>
+	    			<div class="row project-info-synopsis">
+						An attempt to simulate the effects of watercolor (water seeping into paper) that can be painted with the mouse. The simulation of water is a challenging topic usually studied in computer graphics. Our attempt here uses a variety of creative coding tricks to "fake" the aesthetic and visual effecs of the paint to simulate watercolour.
+					</div>
+    			</div>
+
+			</div>
+			<div class="col col-8 description">
+				<div class="project-photo-container">
+								    <div class="image-holder">
+								    	<img src="assets/images/paint/paint1.jpg">
+								    </div>
+								    <div class="project-detail-content">
+								    		Watercolor is modeled by having time as a function of how much "ink" is left in each paint stroke.
+									</div>
+								    <div class="image-holder">
+								    	<img src="assets/images/paint/paint2.jpg">
+								    </div>
+								     <div class="project-detail-content">
+								     	Each paint stroke is alpha-layered with between eight to ten other paint strokes which were either lighter or darker in color on the same monochromatic palette.
+
+									</div>
+								    <div class="image-holder">
+								    	<img src="assets/images/paint/paint3.png">
+								    </div>
+								    <div class="project-detail-content">
+								    	In p5.js, we can draw strokes as "lines" with varying stroke weight, color, and opacity. 
+									</div>
+								    <div class="image-holder">
+								    	<img src="assets/images/paint/paint4.png">
+								    </div>
+								    <div class="project-detail-content">
+								    		These strokes are very short in length (the distance between the previous and current position of the mouse) which contribute to the gradient and dynamic feel of each paint stroke, consisting of many small lines.
+									</div>
+								    <div class="image-holder">
+								    	<img src="assets/images/paint/paint5.png">
+								    </div>
+								    <div class="project-detail-content">
+								    		Based on time, each paint stroke has decreasing opacity and stroke weight applied. Finally, the layered paintstrokes are additevely blended together and a small degree of randomness and noise is applied to each stroke prevent the strokes (and blending) to be on top of each other.
+
+									</div>
+								    
+								    
+			    			</div>
+
+		</div>
+
+	<script type="text/javascript" src="js/script.js"></script>
+	<script src="http://vjs.zencdn.net/5.19.2/video.js"></script>
+    <!-- Kube JS + jQuery are used for some functionality, but are not required for the basic setup -->
+    <script src="js/kube.js"></script>
+</body>
+</html>
