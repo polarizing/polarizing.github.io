@@ -94,6 +94,13 @@ body.prevent-scroll {
 
 }
 
+.project-link-url-container {
+	margin-top: 10px;
+}
+.project-link-url {
+	font-size: 16px;
+}
+
 .project-info-title {
 	/*height: 30px;*/
 	font-size: 32px;
