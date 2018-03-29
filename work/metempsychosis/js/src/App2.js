@@ -444,9 +444,11 @@ var App = function() {
 
     var _initSound = function() {
           sound = new Howl({
-            src: ['bg.wav']
+            src: ['bg.mp3']
           })
-          sound.play();
+          sound.once('load', function() {
+            sound.play();
+          })
     }
 
     var _initUI = function() {
