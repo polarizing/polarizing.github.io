@@ -11,6 +11,18 @@ var appState = {
   currentMemorySelectionReady: false
 }
 
+$("#wait").typed({
+  strings: ['this is an interactive film set in the future', 
+  'year 3001. artificial intelligence has taken over the world.', 
+  'in a world consumed by data, human memories are highly sought after', 
+  'you are a memory extraction operator',
+  'your sole task is to monitor, observe and extract his memories from behind the machine',
+  ],
+  callback: function() {
+  },
+  fadeOut: true
+  })
+
 var queue        = new createjs.LoadQueue(),
     $state       = $('#state'),
     $progress    = $('#progress'),
@@ -115,6 +127,7 @@ for (var i = 1; i < 53; i++) {
 queue.loadManifest(manifest);
 
 function switchVideo (id) {
+  console.log("SWITCHED");
         var vid = queue.getResult(id);
           if (appState.video.id) {
             $('#' + appState.video.id).get(0).pause();
@@ -146,6 +159,10 @@ function getRandomInt(min, max) {
 // interaction, animation to parts of our SVG.
 
 function onComplete(event) {
+    $("#intro").show();
+    $("#wait").hide();
+
+  console.log("ALL DONE");
 
   // console.log('Complete', event);
   // $state.text( $state.text() + '[All loaded]' );
@@ -853,12 +870,12 @@ function onComplete(event) {
 
             // STEP 3: Putting everything together.
             // Here we will control the main logic of our application.
-            
-            sound001 = createjs.Sound.play("audio001", { loop: -1 , volume: 0.15});
             switchVideo("video001");
             $('#' + appState.video.id).get(0).loop = false;
 
+            sound001 = createjs.Sound.play("audio001", { loop: -1 , volume: 0.15});
 
+            
             // When first loaded on landing page, GUI is not seen.
             if (appState.currentState == 0) {
               $('#svgout').hide();

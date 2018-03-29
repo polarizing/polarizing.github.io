@@ -23,6 +23,25 @@
     src: url(../assets/fonts/Trivial-Bold.otf);  
 }
 
+#wait {
+  font-family: 'Trivial-UltraLight';
+  font-size: 22px;
+  color: white;
+  z-index: 10000;
+  /*margin: 30px;*/
+   position: fixed;
+  top: 50%;
+  left: 50%;
+  /* bring your own prefixes */
+  transform: translate(-50%, -50%);
+  background: black;
+  padding: 30px;
+  width: 400px;
+  text-align:center;
+}
+#wait-assets {
+  font-size: 20px;
+}
 #GUI_BUTTON_COMPONENT {  
   cursor: pointer;  
 }
@@ -122,6 +141,7 @@ svg { position:fixed; top:0; left:0; height:98%; width:98% }
 }
 
 #intro { 
+  display:none;
   font-family: 'Trivial-Light';
   font-weight:100; 
   background: rgba(0,0,0,0.3);
