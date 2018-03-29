@@ -532,6 +532,7 @@ var App = function() {
 
         _gui.add(_guiFields, "screenshot");
         _gui.add(_guiFields, "fullscreen");
+        _gui.close();
     };
 
     var _initKeyboard = function() {

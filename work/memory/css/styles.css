@@ -1,0 +1,337 @@
+@font-face {
+  font-family: 'Trivial-Regular';
+  src: url('../assets/fonts/Trivial-Regular.otf') ;
+
+}
+
+@font-face {
+  font-family: 'Trivial-Light';
+  src: url('../assets/fonts/Trivial-Light.otf') ;
+}
+
+@font-face {
+    font-family: 'Trivial-Thin';
+    src: url(../assets/fonts/Trivial-Thin.otf);
+}
+@font-face {  
+    font-family: 'Trivial-UltraLight';  
+    src: url(../assets/fonts/Trivial-UltraLight.otf);  
+}
+
+@font-face {  
+    font-family: 'Trivial-Bold';  
+    src: url(../assets/fonts/Trivial-Bold.otf);  
+}
+
+#GUI_BUTTON_COMPONENT {  
+  cursor: pointer;  
+}
+
+#leftHandBoundary {
+  cursor: pointer;
+} 
+
+#headBoundary {
+  cursor: pointer;
+}
+
+#chestBoundary {
+  cursor: pointer;
+}
+
+#leftShoulderBoundary {
+  cursor: pointer;
+}
+
+#rightShoulderBoundary {
+  cursor: pointer;
+}
+
+#leftHandBoundary {
+  cursor: pointer;
+}
+
+#rightHandBoundary {
+  cursor: pointer;
+}
+
+#leftFootBoundary {
+  cursor: pointer;
+}
+
+#rightFootBoundary {
+  cursor: pointer;
+}
+
+
+
+body {
+  margin: 0;
+  background: #000;
+  padding: 0;
+  overflow:hidden; 
+  height: 100%;
+}
+
+canvas {display:block;}    /* remove scrollbars */
+canvas:focus {outline:0;} /* remove blue outline around canvas */
+
+svg { position:fixed; top:0; left:0; height:98%; width:98% }
+
+
+.whitefadein {
+  transition: fill 1s, opacity 1s;
+  fill: #ffffff;
+  opacity: 0.20;
+}
+
+.whitefadeout {
+  transition: fill 1s, opacity 1s;
+  fill: #ffffff;
+  opacity: 0.05;
+}
+
+.redfadein {
+  transition: fill 1s, opacity 1s;
+  fill: #ff0000;
+  opacity: 0.20;
+}
+
+.redfadeout {
+  transition: fill 1s, opacity 1s;
+  fill: #ffffff;
+  opacity: 0.15;
+}
+
+.fs-video { 
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    transition: 1s opacity;
+}
+
+.stopfade { 
+   opacity: 0;
+   transition: 3s opacity;
+}
+
+#intro { 
+  font-family: 'Trivial-Light';
+  font-weight:100; 
+  background: rgba(0,0,0,0.3);
+  color: white;
+  padding: 2rem;
+  width: 30%;
+  margin:2rem;
+  float: right;
+  font-size: 12px;
+  position: fixed;
+  right: 50px;
+  top: 50px;
+  z-index: 1000;
+}
+
+#intro h1 {
+  font-size: 2.5rem;
+  letter-spacing: 0rem;
+
+}
+h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  margin-top: 0;
+  letter-spacing: .3rem;
+}
+#intro button { 
+  display: block;
+  width: 80%;
+  padding: .4rem;
+  border: none; 
+  margin: 1rem auto; 
+  font-size: 1.3rem;
+  background: rgba(255,255,255,0.23);
+  color: #fff;
+  border-radius: 3px; 
+  cursor: pointer;
+  transition: .3s background;
+  margin-top: 25px;
+}
+#intro button:hover { 
+   background: rgba(0,0,0,0.5);
+}
+
+a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  background:rgba(0,0,0,0.5);
+  padding: .5rem;
+  transition: .6s background; 
+}
+a:hover{
+  background:rgba(0,0,0,0.9);
+}
+
+#info {
+        position: absolute;
+        width: 100%;
+        color: #ffffff;
+        padding: 5px;
+        font-family: Monospace;
+        font-size: 13px;
+        font-weight: bold;
+        text-align: center;
+        z-index: 1;
+      }
+      #menu {
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+        text-align: center;
+        font-family: 'Trivial-Regular';
+      }
+
+      .memory {
+        width: 250px;
+        height: 300px;
+        box-shadow: 0px 0px 12px rgba(0,255,255,0.5);
+        border: 1px solid rgba(127,255,255,0.25);
+        text-align: center;
+        cursor: default;
+        font-family: 'Trivial-Regular';        
+
+      }
+      .memory:hover {
+        box-shadow: 0px 0px 12px rgba(0,255,255,0.75);
+        border: 1px solid rgba(127,255,255,0.75);
+      }
+
+      .memory img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 1.0;
+        /*filter: blur(0px);*/
+        filter: grayscale(100%);
+
+
+        /*background-blend-mode: screen;*/
+        /*mix-blend-mode: screen;*/
+        /*background: rgba(76, 175, 80, 0.1)  Green background with 30% opacity */
+
+      }
+        .memory .name {
+          overflow: hidden;
+          position: absolute;
+          bottom: -25px;
+          font-size: 14px;
+          color: rgba(255, 255, 255,1);
+        }
+        .memory .memoryId {
+          position: absolute;
+          bottom: -30px;
+          font-size: 28px;
+          color: rgba(255, 255, 255,1);
+        }
+        .memory .symbol {
+          position: absolute;
+          top: 40px;
+          left: 0px;
+          right: 0px;
+          font-size: 60px;
+          font-weight: bold;
+          color: rgba(255,255,255,0.75);
+          text-shadow: 0 0 10px rgba(0,255,255,0.95);
+        }
+        .memory .details {
+          position: absolute;
+          bottom: 15px;
+          left: 0px;
+          right: 0px;
+          font-size: 12px;
+          color: rgba(127,255,255,0.75);
+        }
+
+        #video {
+          width: 100%;
+          height: 100%;
+        }
+
+        .date {
+          line-height: 0;
+          width: 1500px;
+          height: 100%;
+          font-size: 100px;
+  /*        box-shadow: 0px 0px 12px rgba(0,255,255,0.5);
+          border: 1px solid rgba(127,255,255,0.25);*/
+          text-align: center;
+          cursor: default;
+          font-family: 'Trivial-Light';
+          color: white;
+          opacity: 0.6;
+        }
+
+        .newmemory {
+          width: 250px;
+          height: 300px;
+          font-size: 100px;
+          color: white;
+          text-align: center;
+          font-family: 'Trivial-Regular';
+          box-shadow: 0px 0px 12px rgba(0,255,255,0.5);
+          border: 1px solid rgba(127,255,255,0.25);
+        }
+        .newmemory:hover {
+          box-shadow: 0px 0px 12px rgba(0,255,255,0.75);
+          border: 1px solid rgba(127,255,255,0.75);
+        }
+
+        .newmemory img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 1.0;
+            /*filter: blur(0px);*/
+            /*filter: grayscale(100%);*/
+            /*background-blend-mode: screen;*/
+            /*mix-blend-mode: screen;*/
+            /*background: rgba(76, 175, 80, 0.1)  Green background with 30% opacity */
+          }
+
+        .newmemoryId {
+          position: absolute;
+          bottom: -30px;
+          font-size: 28px;
+          color: rgba(255, 255, 255,1);
+        }
+
+      button {
+        font-family: 'Trivial-Regular';
+        color: rgba(127,255,255,0.75);
+        background: transparent;
+        outline: 1px solid rgba(127,255,255,0.75);
+        border: 0px;
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: rgba(0,255,255,0.5);
+      }
+      button:active {
+        color: #000000;
+        background-color: rgba(0,255,255,0.75);
+      }
+
+
+@media screen and (max-width: 500px) { 
+  div{width:70%;} 
+}
+@media screen and (max-device-width: 800px) {
+  #bgvid { display: none; }
+}
